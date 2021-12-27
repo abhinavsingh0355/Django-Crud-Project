@@ -34,7 +34,7 @@
                     <td>
                         <a href="{% url 'updatedata' st.id %}" class="btn btn-warning btn-sm">Edit</a>
                         <form action="{% url 'deletestudent' st.id %}" method="POST" class="d-inline"> {% csrf_token %}
-                            <input type="submit" class="btn btn-danger" value="Delete">
+                            <input type="submit" class="btn btn-danger" value="Delete" onclick="confirm('Do you really want to delete this data?')">
                         </form>
                     </td>
                 </tr>
